@@ -1,0 +1,161 @@
+@mixin default-block{
+    margin: 0 auto;
+    width: 960px;
+}
+$highlightStyles: (
+  center: (top, 60%, 90%),
+  aboveMin: (bottom, 80%, 100%),
+  above: (bottom, 90%, 100%)
+);
+%containerTextColor{
+    color: #c0bebf;
+}
+%button{
+    background-color: $colorButton;
+    border: 0px;
+    padding: 10px 30px;
+    border-radius:2px;
+    color: white;
+    font-weight: bold;
+}
+body {
+    background: $contentBackground;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+main {
+    position: relative;
+      @include default-block;
+      z-index: 300;
+}
+.header{
+    background-image: url("../img/"+$headerImage);
+    background-size: cover;
+    background-position-y: center;
+    border-radius: 0  0 65em/15em;
+    height: 100vh;
+}
+.header-wrap{
+    @include default-block;
+    padding: 30px;
+}
+.landing-logo{
+    color: $headerColor;
+    height: max-content;
+    p{
+        display: inline-block;
+        margin: 0;
+        text-align: center;
+        vertical-align: top;
+        font-family: 'Hind', sans-serif;
+        font-weight: bold;
+        span{
+            display: block;
+            font-size: 0.1em;
+        }
+    }
+}
+.header_heading{
+    color: $headerColor;
+    width: 30vw;
+}
+.span{
+    position: relative;
+    @each $name, $scale in $highlightStyles {
+    $direction: nth($scale, 1);
+    $size: nth($scale, 2);
+    $height: nth($scale, 3);
+      &_#{$name}{
+        background: linear-gradient(to $direction, $highlightText $size, transparent 0%);
+        background-size: 100% $height;
+      }
+    }
+}
+.header_text{
+    width: 40vw;
+    white-space: pre-line;
+    margin: 50px 0px;
+    color: $headerColor;
+}
+.header_links{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+.header_button{
+   @extend %button;
+}
+.login{
+    color: white;
+}
+.section_text{
+    color: $headerColor;
+    text-align: center;
+}
+.section_card{
+    padding: 10px;
+    color: white;
+    display: flex;
+    background-color: $containerBackground;
+    margin: 20px 0px;
+    div,img{
+        width: 50%;
+    }
+}
+.section_card_img{
+    width: 100%;
+}
+.section_card_right_container, .section_link{
+    padding: 1% 2%;
+    @extend %containerTextColor;
+}
+.section_link{
+    display: block;
+}
+.section_card_heading, .section_link{ 
+    text-align: center;
+}
+.section_card_heading{
+    color: white;
+    font-weight: bold;
+    padding: 30px;
+}
+
+.section_banner{
+    padding: 15px 0px;
+    border-radius: 5px;
+    @include default-block;
+    background: linear-gradient(to right, $gradientColorFrom, $gradientColorTo);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.section_banner_button{
+    @extend %button;
+    height: 40px;
+}
+.section_banner_heading{
+    color: $headerColor;
+}
+.section_banner_text{
+   @extend %containerTextColor;
+}
+.section_banner_heading, .section_banner_text{
+    line-height: 0.5em;
+}
+footer{
+    margin-top: -50px;
+}
+.footer{
+    background-color: $containerBackground;
+     height: 200px;
+}
+.footer-wrap{
+    @extend %containerTextColor;
+    height: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items:flex-end;
+}
+.footer_logo{
+    color: white;
+}

@@ -1,0 +1,59 @@
+.section_card_right_container, .section_link, .section_banner_text, .footer-wrap { color: #c0bebf; }
+
+.header_button, .section_banner_button { background-color: #699900; border: 0px; padding: 10px 30px; border-radius: 2px; color: white; font-weight: bold; }
+
+body { background: #fff; font-family: 'Source Sans Pro', sans-serif; }
+
+main { position: relative; margin: 0 auto; width: 960px; z-index: 300; }
+
+.header { background-image: url("../img/m-h-day.jpg"); background-size: cover; background-position-y: center; border-radius: 0  0 65em/15em; height: 100vh; }
+
+.header-wrap { margin: 0 auto; width: 960px; padding: 30px; }
+
+.landing-logo { color: #2c2f3c; height: max-content; }
+.landing-logo p { display: inline-block; margin: 0; text-align: center; vertical-align: top; font-family: 'Hind', sans-serif; font-weight: bold; }
+.landing-logo p span { display: block; font-size: 0.1em; }
+
+.header_heading { color: #2c2f3c; width: 30vw; }
+
+.span { position: relative; }
+.span_center { background: linear-gradient(to top, #14a0c7 60%, transparent 0%); background-size: 100% 90%; }
+.span_aboveMin { background: linear-gradient(to bottom, #14a0c7 80%, transparent 0%); background-size: 100% 100%; }
+.span_above { background: linear-gradient(to bottom, #14a0c7 90%, transparent 0%); background-size: 100% 100%; }
+
+.header_text { width: 40vw; white-space: pre-line; margin: 50px 0px; color: #2c2f3c; }
+
+.header_links { width: 40%; display: flex; justify-content: space-between; }
+
+.login { color: white; }
+
+.section_text { color: #2c2f3c; text-align: center; }
+
+.section_card { padding: 10px; color: white; display: flex; background-color: #21232e; margin: 20px 0px; }
+.section_card div, .section_card img { width: 50%; }
+
+.section_card_img { width: 100%; }
+
+.section_card_right_container, .section_link { padding: 1% 2%; }
+
+.section_link { display: block; }
+
+.section_card_heading, .section_link { text-align: center; }
+
+.section_card_heading { color: white; font-weight: bold; padding: 30px; }
+
+.section_banner { padding: 15px 0px; border-radius: 5px; margin: 0 auto; width: 960px; background: linear-gradient(to right, #699900, #14a0c7); display: flex; justify-content: space-around; align-items: center; }
+
+.section_banner_button { height: 40px; }
+
+.section_banner_heading { color: #2c2f3c; }
+
+.section_banner_heading, .section_banner_text { line-height: 0.5em; }
+
+footer { margin-top: -50px; }
+
+.footer { background-color: #21232e; height: 200px; }
+
+.footer-wrap { height: 80%; display: flex; justify-content: space-around; align-items: flex-end; }
+
+.footer_logo { color: white; }
